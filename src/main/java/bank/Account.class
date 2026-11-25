@@ -1,0 +1,56 @@
+// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
+package bank;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Account {
+   private final String accountNumber;
+   private final String holderName;
+   private double balance;
+   private final List<String> history = new ArrayList();
+
+   public Account(String var1, String var2, double var3) {
+      this.accountNumber = var1;
+      this.holderName = var2;
+      this.balance = var3;
+      this.history.add(String.format("Account opened with %.2f", var3));
+   }
+
+   public void deposit(double var1) {
+      if (var1 <= (double)0.0F) {
+         throw new IllegalArgumentException("Deposit amount must be positive.");
+      } else {
+         this.balance += var1;
+         this.history.add(String.format("Deposited %.2f | Balance: %.2f", var1, this.balance));
+      }
+   }
+
+   public void withdraw(double var1) {
+      if (var1 <= (double)0.0F) {
+         throw new IllegalArgumentException("Withdrawal amount must be positive.");
+      } else if (var1 > this.balance) {
+         throw new IllegalStateException("Insufficient funds.");
+      } else {
+         this.balance -= var1;
+         this.history.add(String.format("Withdrew %.2f | Balance: %.2f", var1, this.balance));
+      }
+   }
+
+   public double getBalance() {
+      return this.balance;
+   }
+
+   public String getAccountNumber() {
+      return this.accountNumber;
+   }
+
+   public String getHolderName() {
+      return this.holderName;
+   }
+
+   public List<String> getHistory() {
+      return Collections.unmodifiableList(this.history);
+   }
+}

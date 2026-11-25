@@ -1,0 +1,111 @@
+.root-pane {
+    -fx-background-color: #f1f5f9;
+    -fx-font-family: "System";
+}
+
+/* ---------- Header ---------- */
+.header {
+    -fx-background-color: linear-gradient(to right, #1e3a8a, #2563eb);
+    -fx-padding: 22 24 22 24;
+}
+.title {
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+.subtitle {
+    -fx-text-fill: #bfdbfe;
+    -fx-font-size: 13px;
+}
+
+/* ---------- Cards ---------- */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 16;
+    -fx-effect: dropshadow(gaussian, rgba(15, 23, 42, 0.10), 10, 0, 0, 2);
+}
+.caption {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+.balance {
+    -fx-text-fill: #0f172a;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+}
+
+/* ---------- Input ---------- */
+.amount-field {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 10 12 10 12;
+    -fx-font-size: 14px;
+}
+.amount-field:focused {
+    -fx-border-color: #2563eb;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 16 10 16;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+.btn-deposit {
+    -fx-background-color: #16a34a;
+}
+.btn-deposit:hover {
+    -fx-background-color: #15803d;
+}
+.btn-withdraw {
+    -fx-background-color: #dc2626;
+}
+.btn-withdraw:hover {
+    -fx-background-color: #b91c1c;
+}
+
+/* ---------- Status message ---------- */
+.status {
+    -fx-font-size: 12px;
+    -fx-padding: 8 10 8 10;
+    -fx-background-radius: 6;
+    -fx-max-width: infinity;
+}
+.status-ok {
+    -fx-background-color: #dcfce7;
+    -fx-text-fill: #166534;
+}
+.status-error {
+    -fx-background-color: #fee2e2;
+    -fx-text-fill: #991b1b;
+}
+
+/* ---------- History list ---------- */
+.list-view {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 9 8 9 8;
+    -fx-font-size: 13px;
+    -fx-text-fill: #334155;
+    -fx-border-color: transparent transparent #e2e8f0 transparent;
+}
+.list-cell:filled:hover {
+    -fx-background-color: #f8fafc;
+}
+.tx-deposit {
+    -fx-text-fill: #15803d;
+}
+.tx-withdraw {
+    -fx-text-fill: #b91c1c;
+}
